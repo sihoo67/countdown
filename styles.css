@@ -1,0 +1,106 @@
+/* 모든 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gaegu', serif; /* 고풍스러운 서체 사용 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://www.example.com/palace-pattern.jpg') no-repeat center center;
+    background-size: cover;
+    color: #F1C27D;  /* 황금색 */
+    text-align: center;
+    overflow: hidden;
+    animation: backgroundAnimation 30s infinite linear;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #9E1B32;  /* 붉은색 */
+    }
+    50% {
+        background-color: #FFD700;  /* 금색 */
+    }
+    100% {
+        background-color: #9E1B32;
+    }
+}
+
+.countdown-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px 100px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border: 3px solid #FFD700;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-out;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+    color: #FFD700;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.countdown-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 25px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 3px solid #FFD700;
+    transition: transform 0.4s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.countdown-item:hover {
+    transform: scale(1.1);
+}
+
+.time {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #FFD700;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    color: #F1C27D;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#days, #hours, #minutes, #seconds {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 고급스러운 음악 배경 */
+#background-music {
+    display: none;
+}
